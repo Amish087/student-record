@@ -5,10 +5,10 @@ $student = $conn->query("SELECT * FROM students WHERE id=$id")->fetch_assoc();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $name = $_POST['name'];
-  $email = $_POST['email'];
+  $attendance = $_POST['attendance'];
   $course = $_POST['course'];
 
-  $conn->query("UPDATE students SET name='$name', email='$email', course='$course' WHERE id=$id");
+  $conn->query("UPDATE students SET name='$name', attendance='$attendance', course='$course' WHERE id=$id");
   header("Location: index.php");
 }
 ?>
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <h2>Edit Student</h2>
   <form method="POST">
     Name: <input type="text" name="name" value="<?= $student['name'] ?>" required><br><br>
-    Email: <input type="email" name="email" value="<?= $student['email'] ?>" required><br><br>
+    Email: <input type="attendance" name="attendance" value="<?= $student['attendance'] ?>" required><br><br>
     Course: <input type="text" name="course" value="<?= $student['course'] ?>" required><br><br>
     <button type="submit">Update</button>
   </form>
