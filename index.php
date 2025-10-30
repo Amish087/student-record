@@ -11,7 +11,7 @@
   <a href="add.php">+ Add Student</a>
   <table>
     <tr>
-      <th>ID</th><th>Name</th><th>Email</th><th>Course</th><th>Actions</th>
+      <th>ID</th><th>Name</th><th>Attendance</th><th>Course</th><th>Actions</th>
     </tr>
 
     <?php
